@@ -1,0 +1,62 @@
+.blackbox {
+    height:300px;
+    width:300px;
+    background-color: black;
+    position: relative;
+    top: 100px;
+    display: flex;
+    flex-direction: column;     
+    background: rgba(0, 0, 0, 0.8);
+    row-gap: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+
+.main{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button{
+    background-color: red;
+    transition: 0.3s;
+    height: 40px;
+    width: 280px;
+}
+
+.button:hover{
+    transform: translateY(-2px);
+}
+
+.signup{
+    color: white;
+    font-weight: 20px;
+    font-size: 30px;
+    
+    
+}
+
+.member{
+    
+    color: grey;
+}
+
+.link{
+    position: relative;
+}
+
+.buttonmain{
+    position: relative;
+    left: 10px;
+    
+}
+
+.navbar{
+    height: 100px;
+    background-color: red;
+    color: white;
+    
+}
