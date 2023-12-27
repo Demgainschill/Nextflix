@@ -1,6 +1,3 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
 generator client {
   provider = "prisma-client-js"
 }
@@ -11,22 +8,22 @@ datasource db {
 }
 
 model Account {
-  id                 String  @id @default(cuid())
-  userId             String
-  type               String
-  provider           String
-  providerAccountId  String
-  refresh_token      String?  @db.Text
-  access_token       String?  @db.Text
-  expires_at         Int?
-  token_type         String?
-  scope              String?
-  id_token           String?  @db.Text
-  session_state      String?
-
-  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  id                String  @id @default(cuid())
+  userId            String
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String? @db.Text
+  access_token      String? @db.Text
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String? @db.Text
+  session_state     String?
+  user              User    @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@unique([provider, providerAccountId])
+  @@index([userId], map: "Account_userId_fkey")
 }
 
 model Session {
@@ -35,6 +32,8 @@ model Session {
   userId       String
   expires      DateTime
   user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId], map: "Session_userId_fkey")
 }
 
 model User {
@@ -53,22 +52,22 @@ model Movie {
   title         String
   age           Int
   duration      Float
-  overview      String      
+  overview      String      @db.VarChar(2000)
   release       Int
   videoSource   String
   category      String
   youtubeString String
+  createdAt     DateTime    @default(now())
   WatchLists    WatchList[]
-
-  createdAt DateTime @default(now())
 }
 
 model WatchList {
-  id     String @id @default(uuid())
-  userId String
-
-  Movie   Movie? @relation(fields: [movieId], references: [id])
+  id      String @id @default(uuid())
+  userId  String
   movieId Int?
+  Movie   Movie? @relation(fields: [movieId], references: [id])
+
+  @@index([movieId], map: "WatchList_movieId_fkey")
 }
 
 model VerificationToken {
@@ -78,4 +77,3 @@ model VerificationToken {
 
   @@unique([identifier, token])
 }
-

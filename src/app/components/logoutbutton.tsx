@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button';
 
 const Logout= () => {
   return (
-    <div> 
+    <div className='flex  justify-end px-10 relative bottom-22'> 
         <Button onClick={() => signOut()}>Sign out</Button>
     </div>
   )
