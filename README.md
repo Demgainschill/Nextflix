@@ -1,36 +1,25 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Nextflix ( A netflix clone ) 
 
-## Getting Started
+Right here i had created a netflix clone using nextjs inorder to learn "a lot" about full stack web development.
 
-First, run the development server:
+Inorder to run nextflix we have to run the following command after cloning the repository
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+clone with the following command 
+git clone https://github.com/Demgainschill/Nextflix.git
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Once in the Nextflix directory
+and Run
+"npm run dev"
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+It will now say the link it is being hosted at a localhost link
+lets consider "https://localhost:4000" We must now go to this link
+and once we open the webpage we will get a webpage like this
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+![Screenshot From 2025-04-20 18-49-47](https://github.com/user-attachments/assets/d4eadcca-8f56-4ffd-a04a-d7acca929ebd)
 
-## Learn More
+We can see this is the login page and now we login with our specified credentials or through github hooks.
 
-To learn more about Next.js, take a look at the following resources:
+Once we Successfully login we are brought to the main dashboard of "Nextflix" We are shown the recommendations as seen by the dashboard.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+We have the ability to see the description as well as the ability to add the movies to the wishlist.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
